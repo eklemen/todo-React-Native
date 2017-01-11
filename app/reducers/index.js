@@ -1,19 +1,7 @@
-module.exports = (state, action) => {
-    switch(action.type) {
-        // case 'ADD_TODO': {
-        //     let newTodos = [
-        //         ...state.todos,
-        //         {
-        //             text: action.payload,
-        //             id: uuid.v4()
-        //         }
-        //     ];
-        //     return {
-        //         todos: newTodos
-        //     }
-        // }
+import update from 'react-addons-update';
+import {combineReducers} from 'redux';
+import {reducer as formReducer} from 'redux-form';
 
-        default:
-            return state;
-    }
-};
+module.exports = combineReducers({
+    form: formReducer
+});
